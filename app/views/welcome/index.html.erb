@@ -1,14 +1,24 @@
 <h1>Seja Bem-Vindo!</h1>
 <p>Augusto Scher</p>
 
-<!--#eRuby -->
-<p>A soma é: <%= 1 + 1 %></p>
-<p>Seu nome de trás pra frente é: <%= "Augusto".reverse %></p>
+<div>
+    <ul>
+        <li><a href="/coins">Cadastro de Moedas</a></li>
+        <li><%= link_to "Cadastro de Moedas2", coins_path %></li>
+    </ul>
+</div>
 
-<!--não imprime na tela, só declara. Para imprimir, precisa de do sinal de igual para imprimir -->
-<% a = "minha variável a é isso" %>
-<p>Imprimindo a variável a: <%= a %></p>
-<p>A data de hoje é: <%= Date.today %></p>
 
-<!--Exemplo de comentário -->
-<%# a = "minha variável a é isso" %>
+<div>
+    <!--#eRuby -->
+    <p>A soma é: <%= 1 + 1 %></p>
+    <p>Seu nome de trás pra frente é: <%= "Augusto".reverse %></p>
+
+    <!--não imprime na tela, só declara. Para imprimir, precisa de do sinal de igual para imprimir -->
+    <% a = "minha variável a é isso" %>
+    <p>Imprimindo a variável a: <%= a %></p>
+    <p>A data de hoje é: <%= Date.today %></p>
+
+    <!--Exemplo de comentário -->
+    <%# a = "minha variável a é isso" %>
+</div>
