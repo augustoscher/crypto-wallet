@@ -1,5 +1,6 @@
-<h1>Seja Bem-Vindo!</h1>
+<h1>Seja Bem-Vindo ao <%= nome_aplicacao %></h1>
 <p>Augusto Scher</p>
+<p><strong>Data:</strong> <%= data_br(Date.today) %></p>
 
 <div>
     <ul>
@@ -17,7 +18,7 @@
     <!--não imprime na tela, só declara. Para imprimir, precisa de do sinal de igual para imprimir -->
     <% a = "minha variável a é isso" %>
     <p>Imprimindo a variável a: <%= a %></p>
-    <p>A data de hoje é: <%= Date.today %></p>
+    
 
     <!--Exemplo de comentário -->
     <%# a = "minha variável a é isso" %>
