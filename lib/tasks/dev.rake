@@ -25,4 +25,4 @@ namespace :dev do
       spinner.success("(#{msg_end})")
     end
   end
-end
+
