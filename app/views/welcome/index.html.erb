@@ -1,14 +1,16 @@
 <h1>Seja Bem-Vindo ao <%= nome_aplicacao %></h1>
 <p>Augusto Scher</p>
 <p><strong>Data:</strong> <%= data_br(Date.today) %></p>
+<p>Você está em ambiente de <%= ambiente_rails%></p>
+<% if @nome != nil%>
+<p>Você passou o parâmetro: <%= @nome%></p>
+<% end%>
 
-<div>
-    <ul>
-        <li><a href="/coins">Cadastro de Moedas</a></li>
-        <li><%= link_to "Cadastro de Moedas2", coins_path %></li>
-    </ul>
-</div>
-
+<!--
+Utiliza o helper render para renderizar uma partial 
+O arquivo da Partial deve começar com _ mas para utilizá-la, fica sem _
+-->
+<%= render "menu"%>
 
 <div>
     <!--#eRuby -->
