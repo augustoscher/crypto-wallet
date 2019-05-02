@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mining_types
   get 'welcome/index'
   #como o nome da rota e diferente do path, tem que usar o 'to:'
   get '/inicio', to: 'welcome#index'
