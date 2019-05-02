@@ -20,6 +20,10 @@
   <%= image_tag @coin != nil && @coin.url_image ? @coin.url_image : '' , width:25, height:25 %> 
 </p>
 
+<p>
+  <strong>Mining Type:</strong>
+  <%= "#{@coin.mining_type.acronym} - #{@coin.mining_type.description}"%> 
+</p>
 
 <%= link_to 'Edit', edit_coin_path(@coin) %> |
 <%= link_to 'Back', coins_path %>
