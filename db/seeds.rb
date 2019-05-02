@@ -9,7 +9,7 @@
 
 
 # arquivo de inicialização de banco de dados.
-# foi movido esse comportamento para tasks
+# foi movido esse comportamento para tasks (lib\dev.rake)
 =begin
 spinner = TTY::Spinner.new("[:spinner] Inicializando moedas")
 spinner.auto_spin
