@@ -1,7 +1,7 @@
 module ApplicationHelper
     #helper customizado para toda a aplicação
     def data_br(data)
-        data.strftime("%d/%m/%Y")
+        I18n.l(data)
     end
 
     def nome_aplicacao
@@ -17,4 +17,8 @@ module ApplicationHelper
             "Teste"
         end
     end
+
+    # def get_default_locale
+    #     I18n.default_locale == :en ? "USA" : "BRA"
+    # end
 end

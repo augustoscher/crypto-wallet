@@ -2,6 +2,8 @@
 <p>Augusto Scher</p>
 <p><strong>Data:</strong> <%= data_br(Date.today) %></p>
 <p>Você está em ambiente de <%= ambiente_rails%></p>
+<p>Idioma utilizado: <%= t('actual_locale')%></p>
+<p>Internacionalização hello: <%= I18n.t('hello')%></p>
 <% if @nome != nil%>
 <p>Você passou o parâmetro: <%= @nome%></p>
 <% end%>

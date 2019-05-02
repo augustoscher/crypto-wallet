@@ -1,0 +1,15 @@
+pt-BR:
+  actual_locale: "Brasil"
+  hello: "Olá"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+  labels:
+    description: "Descrição"
+    acronym: "Sigla"
+    url_image: "Imagem"
+    mining_type: "Tipo Mineração"
+    coin: "Moeda"
+    new_coin: "Nova Moeda"
+    back: "Voltar"

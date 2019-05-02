@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Moedas</h1>
+<h1><%= t('labels.coin')%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Descrição</th>
-      <th>Sigla</th>
-      <th>Imagem</th>
+      <th><%= t('labels.description')%></th>
+      <th><%= t('labels.acronym')%></th>
+      <th><%= t('labels.url_image')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
          isso: <%= link_to 'Mostrar', coin %> é igual a 
          isso: <%= link_to 'Mostrar', coin_path(coin.id) %>
          -->
-        <td><%= link_to 'Mostrar', coin %></td>
-        <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
-        <td><%= link_to 'Apagar', coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to t('links.show'), coin %></td>
+        <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
+        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,8 +36,8 @@
 
 <br>
 <div>
-  <%= link_to 'Nova Moeda', new_coin_path %>
+  <%= link_to t('labels.new_coin'), new_coin_path %>
 </div>
 <div>
-  <%= link_to 'Back', welcome_index_path %>
+  <%= link_to t('labels.back'), welcome_index_path %>
 </div>

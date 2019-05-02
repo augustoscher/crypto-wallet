@@ -30,4 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  actual_locale: "United States"
+  hello: "Hello"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+  labels:
+    description: "Description"
+    acronym: "Acronym"
+    url_image: "Image"
+    mining_type: "Mining Type"
+    coin: "Coin"
+    new_coin: "New Coin"
+    back: "Back"
