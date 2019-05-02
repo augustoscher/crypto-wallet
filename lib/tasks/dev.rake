@@ -8,8 +8,10 @@ namespace :dev do
       show_spinner("Creating database...") { %x(rails db:create) }        
       show_spinner("Migrating database...") { %x(rails db:migrate) }
       show_spinner("Initializing database...") { %x(rails db:seed) }
-      %x(rails dev:add_coins)
+      
+      #Precisa ser em ordem
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else 
       puts "You're not in development"
     end
@@ -19,11 +21,11 @@ namespace :dev do
   task add_coins: :environment do
     show_spinner("Adding Coins...") do
       coins = [ 
-              { description: "Bitcoin", acronym: "BTC", url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQwvZrzgk9W9LwnL2Le9K42wEnsgM8pd9DhCUz8Wn1EKzFXyKaqA" },
-              { description: "Ethereum", acronym: "ETH", url_image: "https://img2.gratispng.com/20180330/wae/kisspng-ethereum-bitcoin-cryptocurrency-logo-tether-bitcoin-5abdfe01b6f4b4.2459439115224007697494.jpg" },            
-              { description: "Dash", acronym: "DASH", url_image: "https://cdn1.iconfinder.com/data/icons/cryptocurrency-round-color/128/blockchain_cryptocurrency_currency_Dash_Darkcoin_XCoin_1-512.png" },
-              { description: "Iota", acronym: "IOT", url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttWLPcDiEYfhZ2Txvv1ajzMIL9AI1U-MOmboevKEwHJ1GOVvH" },            
-              { description: "ZCash", acronym: "ZEC", url_image: "https://cdn4.iconfinder.com/data/icons/zcash-bitcoin-crytocurrency/128/zcash_crypto_cryptocurrency_coin_coins-03-512.png" }
+              { description: "Bitcoin", acronym: "BTC", mining_type: MiningType.where(acronym: "PoW").sample, url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQwvZrzgk9W9LwnL2Le9K42wEnsgM8pd9DhCUz8Wn1EKzFXyKaqA" },
+              { description: "Ethereum", acronym: "ETH", mining_type: MiningType.all.sample,  url_image: "https://img2.gratispng.com/20180330/wae/kisspng-ethereum-bitcoin-cryptocurrency-logo-tether-bitcoin-5abdfe01b6f4b4.2459439115224007697494.jpg" },            
+              { description: "Dash", acronym: "DASH", mining_type: MiningType.all.sample,  url_image: "https://cdn1.iconfinder.com/data/icons/cryptocurrency-round-color/128/blockchain_cryptocurrency_currency_Dash_Darkcoin_XCoin_1-512.png" },
+              { description: "Iota", acronym: "IOT", mining_type: MiningType.all.sample, url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttWLPcDiEYfhZ2Txvv1ajzMIL9AI1U-MOmboevKEwHJ1GOVvH" },            
+              { description: "ZCash", acronym: "ZEC", mining_type: MiningType.all.sample, url_image: "https://cdn4.iconfinder.com/data/icons/zcash-bitcoin-crytocurrency/128/zcash_crypto_cryptocurrency_coin_coins-03-512.png" }
             ]
 
       coins.each do |coin| 
