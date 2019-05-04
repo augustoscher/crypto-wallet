@@ -1,4 +1,5 @@
 class MiningTypesController < ApplicationController
+  layout "custom-layout"
   before_action :set_mining_type, only: [:show, :edit, :update, :destroy]
 
   # GET /mining_types

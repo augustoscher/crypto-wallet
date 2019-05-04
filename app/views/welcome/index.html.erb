@@ -7,6 +7,13 @@
 <% if @nome != nil%>
 <p>Você passou o parâmetro: <%= @nome%></p>
 <% end%>
+<% if cookies[:curso]%>
+  <p>Welcome-Controller registrou um <strong>cookie</strong>. Conteúdo: <%= cookies[:curso]%></p>
+<% end%>
+<% if session[:session_example]%>
+  <p>Welcome-Controller registrou uma <strong>session</strong>. Conteúdo: <%= session[:session_example]%></p>
+<% end%>
+
 
 <!--
 Utiliza o helper render para renderizar uma partial 

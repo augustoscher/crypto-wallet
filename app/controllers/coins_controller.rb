@@ -1,4 +1,5 @@
 class CoinsController < ApplicationController
+  layout "custom-layout"
   before_action :set_coin, only: [:show, :edit, :update, :destroy]
   before_action :set_mining_type_options, only: [:create, :new, :edit, :update] 
 
