@@ -11,8 +11,11 @@
 
   <body>
     <div>
-      <p><%= link_to 'Portuguese', root_path(locale: 'pt-BR') %> <%= link_to 'English', root_path(locale: 'en') %></p>
+      <p>header</p>
     </div>
     <%= yield %>
   </body>
+  <div>
+    <p>footer</p>
+  </div>
 </html>
