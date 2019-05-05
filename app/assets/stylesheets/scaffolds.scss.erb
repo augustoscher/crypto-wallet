@@ -1,5 +1,10 @@
 body {
-  background-color: #fff;
+  //codigo ruby dentro de scss
+  background-color: <%= Rails.env.development? ? 'white' : 'white' %>;
+  
+  //código scss
+  //background-image: asset-url('rails.png');
+  
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
