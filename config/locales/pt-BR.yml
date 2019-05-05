@@ -1,6 +1,11 @@
 pt-BR:
   actual_locale: "Brasil"
   hello: "Olá"
+  welcome: Bem vindo ao
+  description: Esta é sua Crypto Carteira. App para você gerenciar suas Crypto Moedas.
+  start: Para começar, selecione uma opção
+  wallet: Carteira
+  confirm: Tem certeza?
   links:
     edit: "Editar"
     show: "Mostrar"
@@ -13,3 +18,4 @@ pt-BR:
     coin: "Moeda"
     new_coin: "Nova Moeda"
     back: "Voltar"
+    edit: Editar

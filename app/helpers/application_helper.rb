@@ -5,7 +5,7 @@ module ApplicationHelper
     end
 
     def nome_aplicacao
-        "Crypto Wallet App"
+        "Crypto #{I18n.t('wallet')} App"
     end
 
     def ambiente_rails

@@ -32,6 +32,11 @@
 en:
   actual_locale: "United States"
   hello: "Hello"
+  welcome: Welcome to
+  description: This is Crypto Wallet. App to you manage your Crypto Coins.
+  start: To start, select an option
+  wallet: Wallet
+  confirm: Are you sure?
   links:
     edit: "Edit"
     show: "Show"
@@ -44,3 +49,4 @@ en:
     coin: "Coin"
     new_coin: "New Coin"
     back: "Back"
+    edit: Edit

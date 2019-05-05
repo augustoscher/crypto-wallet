@@ -1,8 +1,8 @@
 <div class="jumbotron">
-  <h1 class="display-4">Bem-Vindo ao <%= nome_aplicacao %></h1>
-  <p class="lead">This is Crypto Wallet. App to you manage your Crypto Coins.</p>
+  <h1 class="display-4"><%= I18n.t('welcome') %> <%= nome_aplicacao %></h1>
+  <p class="lead"><%= I18n.t('description')%></p>
   <hr class="my-4">
-  <p>To start, select an option:</p>
+  <p><%= I18n.t('start')%></p>
   <%= render "menu"%>
 </div>
 <!-- 

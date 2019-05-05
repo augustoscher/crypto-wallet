@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('labels.coin')%></h1>
+<h1><%= Coin.model_name.human%></h1>
 
 <table class="table table-hover">
   <thead>
@@ -28,16 +28,12 @@
          -->
         <td><%= link_to t('links.show'), coin %></td>
         <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
-        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: t('confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<div>
-  <%= link_to t('labels.new_coin'), new_coin_path %>
-</div>
-<div>
-  <%= link_to t('labels.back'), welcome_index_path %>
-</div>
+<%= link_to t('labels.new_coin'), new_coin_path, class:"btn btn-primary" %>
+<%= link_to t('labels.back'), welcome_index_path, class:"btn btn-light" %>
