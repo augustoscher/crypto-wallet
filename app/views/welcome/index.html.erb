@@ -1,9 +1,14 @@
-<h1>Seja Bem-Vindo ao <%= nome_aplicacao %></h1>
-<div>
-  <p><%= link_to 'Portuguese', root_path(locale: 'pt-BR') %> <%= link_to 'English', root_path(locale: 'en') %></p>
+<div class="jumbotron">
+  <h1 class="display-4">Bem-Vindo ao <%= nome_aplicacao %></h1>
+  <p class="lead">This is Crypto Wallet. App to you manage your Crypto Coins.</p>
+  <hr class="my-4">
+  <p>To start, select an option:</p>
+  <%= render "menu"%>
 </div>
+<!-- 
 <p>Augusto Scher</p>
 <p><strong>Data:</strong> <%= data_br(Date.today) %></p>
+
 <p>Você está em ambiente de <%= ambiente_rails%></p>
 <p>Idioma utilizado: <%= t('actual_locale')%></p>
 <p>Internacionalização hello: <%= I18n.t('hello')%></p>
@@ -17,24 +22,25 @@
   <p>Welcome-Controller registrou uma <strong>session</strong>. Conteúdo: <%= session[:session_example]%></p>
 <% end%>
 
-<script>$.notify("Funcionou", "success");</script>
-
-
-<!--
-Utiliza o helper render para renderizar uma partial 
-O arquivo da Partial deve começar com _ mas para utilizá-la, fica sem _
--->
-<%= render "menu"%>
-
 <div>
-    <!--#eRuby -->
+    
     <p>A soma é: <%= 1 + 1 %></p>
     <p>Seu nome de trás pra frente é: <%= "Augusto".reverse %></p>
 
-    <!--não imprime na tela, só declara. Para imprimir, precisa de do sinal de igual para imprimir -->
+    não imprime na tela, só declara. Para imprimir, precisa de do sinal de igual para imprimir 
     <% a = "minha variável a é isso" %>
     <p>Imprimindo a variável a: <%= a %></p>
     
-    <!--Exemplo de comentário -->
+
     <%# a = "minha variável a é isso" %>
 </div>
+
+<script>$.notify("Funcionou", "success");</script>
+
+
+
+Utiliza o helper render para renderizar uma partial 
+O arquivo da Partial deve começar com _ mas para utilizá-la, fica sem _
+<%= render "menu"%>
+-->
+

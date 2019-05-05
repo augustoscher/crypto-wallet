@@ -10,12 +10,14 @@
   </head>
 
   <body>
-    <div>
-      <p>header</p>
+    <div class="container-fluid">
+      <%# <div>
+        <p>header</p>
+      </div> %>
+      <%= yield %>
+      <div>
+        <p>footer</p>
+      </div>
     </div>
-    <%= yield %>
   </body>
-  <div>
-    <p>footer</p>
-  </div>
 </html>
