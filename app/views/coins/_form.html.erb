@@ -40,7 +40,7 @@
 
   <div class="form-group">
     <%= form.label :url_image %>
-    <%= form.text_field :url_image class:"form-control", placeholder:"http://..." %>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"Url" %>
     <%= image_tag coin != nil && coin.url_image ? coin.url_image : '' , width:25, height:25 %> 
   </div>
 
