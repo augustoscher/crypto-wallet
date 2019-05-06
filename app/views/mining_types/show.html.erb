@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @mining_type.description %>
-</p>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @mining_type.acronym %>
-</p>
+<form>
+  <fieldset disabled>
+    <div class="form-group">
+      <%= label_tag nil, I18n.t('labels.description') %>
+      <%= text_field_tag nil, @mining_type.description, class:"form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag nil, I18n.t('labels.acronym') %>
+      <%= text_field_tag nil,@mining_type.acronym, class:"form-control" %>
+    </div>
+  </fieldset>
+</form>
 
 <%= link_to t('labels.edit'), edit_mining_type_path(@mining_type), class:"btn btn-primary" %>
 <%= link_to t('labels.back'), mining_types_path, class:"btn btn-light" %>

@@ -9,18 +9,18 @@
     </div>
 
     <div class="form-group">
-      <%= label_tag nil, @coin.acronym %>
+      <%= label_tag nil, I18n.t('labels.acronym') %>
       <%= text_field_tag nil, @coin.acronym, class:"form-control" %>
     </div>
 
     <div class="form-group">
-      <%= label_tag nil, @coin.url_image %>
+      <%= label_tag nil, I18n.t('labels.url_image') %>
       <%= text_field_tag nil, @coin.url_image, class:"form-control" %>
       <%= image_tag @coin != nil && @coin.url_image ? @coin.url_image : '' , width:25, height:25 %> 
     </div>
 
     <div class="form-group">
-      <%= label_tag nil, @coin.mining_type.description %>
+      <%= label_tag nil, I18n.t('labels.mining_type') %>
       <%= text_field_tag nil, "#{@coin.mining_type.acronym} - #{@coin.mining_type.description}", class:"form-control" %>
     </div>
   </fieldset>
