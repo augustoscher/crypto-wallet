@@ -17,5 +17,6 @@ pt-BR:
     mining_type: "Tipo Mineração"
     coin: "Moeda"
     new_coin: "Nova Moeda"
+    new_mining_type: "Novo Tipo Mineração"
     back: "Voltar"
     edit: Editar

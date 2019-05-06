@@ -48,5 +48,6 @@ en:
     mining_type: "Mining Type"
     coin: "Coin"
     new_coin: "New Coin"
+    new_mining_type: "New Mining Type"
     back: "Back"
     edit: Edit
