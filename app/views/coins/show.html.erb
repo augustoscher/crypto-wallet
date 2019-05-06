@@ -4,7 +4,7 @@
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <%= label_tag nil, :description %>
+      <%= label_tag nil, I18n.t('labels.description') %>
       <%= text_field_tag nil, @coin.description, class:"form-control" %>
     </div>
 
