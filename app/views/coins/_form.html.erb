@@ -46,7 +46,7 @@
 
   <div class="form-group">
     <%= form.label :mining_type%>
-    <%= form.select("mining_type_id",  @mining_type_options, class:"form-control")%>
+    <%= form.select("mining_type_id",  @mining_type_options, { include_blank: "Select..." } class:"form-control") %>
   </div>
 
   <div class="actions">
