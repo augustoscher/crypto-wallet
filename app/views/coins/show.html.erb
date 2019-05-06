@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @coin.description %>
-</p>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @coin.acronym %>
-</p>
+<form>
+  <fieldset disabled>
+    <div class="form-group">
+      <%= label_tag nil, @coin.description %>
+      <%= text_field_tag nil, @coin.description, class:"form-control" %>
+    </div>
 
-<p>
-  <strong>Url image:</strong>
-  <%= @coin.url_image %>
-</p>
+    <div class="form-group">
+      <%= label_tag nil, @coin.acronym %>
+      <%= text_field_tag nil, @coin.acronym, class:"form-control" %>
+    </div>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @coin != nil && @coin.url_image ? @coin.url_image : '' , width:25, height:25 %> 
-</p>
+    <div class="form-group">
+      <%= label_tag nil, @coin.url_image %>
+      <%= text_field_tag nil, @coin.url_image, class:"form-control" %>
+      <%= image_tag coin != nil && coin.url_image ? coin.url_image : '' , width:25, height:25 %> 
+    </div>
 
-<p>
-  <strong>Mining Type:</strong>
-  <%= "#{@coin.mining_type.acronym} - #{@coin.mining_type.description}"%> 
-</p>
+    <div class="form-group">
+      <%= label_tag nil, @coin.mining_type.description %>
+      <%= text_field_tag nil, "#{@coin.mining_type.acronym} - #{@coin.mining_type.description}", class:"form-control" %>
+    </div>
+  </fieldset>
+</form>
+
 
 <%= link_to t('labels.edit'), edit_coin_path(@coin), class:"btn btn-primary" %>
 <%= link_to t('labels.back'), coins_path, class:"btn btn-light" %>
